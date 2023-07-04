@@ -1,0 +1,33 @@
+
+  <div class="post-author">
+    <div class="rotate-img">
+      <img
+        [src]="
+          news.image_url === null
+            ? 'assets/images/inner/inner_5.jpg'
+            : news.image_url
+        "
+        alt="banner"
+        class="img-fluid"
+      />
+    </div>
+    <div class="post-author-content">
+      <h5 class="mb-1">
+        {{
+          news?.title?.length > 80
+            ? (news?.title | slice: 0:80) + ".."
+            : news?.title
+        }}
+      </h5>
+      <p class="fs-13 text-muted mb-0">
+        <span class="mr-2">Photo </span>10 Minutes ago
+      </p>
+      <div class="mt-2">
+        <a [href]="news.link" target="_blank" class="btn btn-primary mr-3"
+          >Read More</a
+        >
+        <a (click)="addBookmark()" class="btn btn-light">Bookmark</a>
+      </div>
+    </div>
+  </div>
+

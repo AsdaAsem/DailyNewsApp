@@ -1,0 +1,27 @@
+
+
+
+  <div data-aos="fade-up">
+    <h1 class="font-weight-600 mb-1">
+        {{ news?.title?.length > 100 ? (news?.title | slice: 0:100) + ".." : news?.title }}
+    </h1>
+    <p class="fs-13 text-muted mb-0">
+      <span class="mr-2">Photo </span>10 Minutes ago
+    </p>
+    <div class="rotate-img">
+      <img
+      [src]="news.image_Url === null ? 'assets/images/dashboard/home_4.jpg' : news.image_Url"
+        alt="banner"
+        class="img-fluid mt-4 mb-4"
+      />
+    </div>
+    <p class="mb-2 fs-15">
+        {{ news?.description?.length > 400 ? (news?.description | slice: 0:400) + ".." : news?.description }}
+    </p>
+    <div class="mb-4">
+      <a [href]="news.link" target="_blank" class="btn btn-primary mr-3">Read More</a>
+      <a (click)="removeBookmark()"  class="btn btn-secondary">Remove</a>
+    </div>
+    
+  </div>
+  

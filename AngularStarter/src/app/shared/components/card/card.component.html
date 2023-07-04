@@ -1,0 +1,52 @@
+
+
+<!-- <div class="card" style="width: 18rem">
+  <img
+    [src]="news.image_url === null ? defaultImage : news.image_url"
+    class="card-img-top"
+    alt="..."
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ news.title }}</h5>
+    <!-- <p class="card-text">{{ description }}</p> -->
+    <!-- <p class="card-text">
+      {{ news?.description?.length > 80 ? (news?.description | slice: 0:80) + ".." : news?.description }}
+    </p>
+    <a [href]="news.link" target="_blank" class="btn btn-primary mr-3">Read More</a>
+    <a (click)="addBookmark()"  class="btn btn-secondary">Bookmark</a>
+  </div>
+</div> --> -->
+
+<div class="row">
+  <div class="col-sm-4 grid-margin">
+    <div class="position-relative">
+      <div class="rotate-img" (click)="readMore(news.link)">
+        <img
+        [src]="news.image_url === null ? 'assets/images/dashboard/home_4.jpg' : news.image_url"
+          alt="thumb"
+          class="img-fluid"
+        />
+      </div>
+      <div class="badge-positioned">
+        <span class="badge badge-danger font-weight-bold"
+          >Flash news</span
+        >
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-8 grid-margin">
+    <h2 class="mb-2 font-weight-600" (click)="readMore(news.link)">
+      {{ news?.title?.length > 40 ? (news?.title | slice: 0:40) + ".." : news?.title }}
+    </h2>
+    <div class="fs-13 mb-2">
+      <span class="mr-2">Photo </span>10 Minutes ago
+    </div>
+    <p class="mb-0">
+      {{ news?.description?.length > 80 ? (news?.description | slice: 0:80) + ".." : news?.description }}
+    </p>
+    <a [href]="news.link" target="_blank" class="btn btn-primary mr-3">Read More</a>
+    <a (click)="addBookmark()"  class="btn btn-light">Bookmark</a>
+  </div>
+</div>
+
+

@@ -1,0 +1,31 @@
+
+
+
+
+
+<div class="content-wrapper">
+  <div class="container">
+    <div class="col-sm-12">
+      <div class="card" data-aos="fade-up">
+        <div class="card-body">
+          <div class="row">
+            <!--  -->
+            <div class="col-lg-10" *ngIf="newses.length>0">
+              
+              
+              <app-news-item [news]="news" *ngFor="let news of newses"></app-news-item>
+              
+              <!-- btn -->
+              <div class="text-center mt-5" *ngIf="newsResult">
+                <button (click)="loadMore()" type="button" class="btn btn-primary">Load More</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

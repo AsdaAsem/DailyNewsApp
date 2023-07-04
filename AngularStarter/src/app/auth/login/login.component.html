@@ -1,0 +1,88 @@
+<!-- <div class="d-flex justify-content-center mt-5">
+  <div class="col-4">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-signin">
+      <div class="text-center mb-4">
+        <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+      </div>
+
+      <app-input
+        label="Email Address"
+        [control]="loginForm.controls.email"
+      ></app-input>
+
+      <app-input
+        label="Password"
+        [control]="loginForm.controls.password"
+        type="password"
+      ></app-input>
+
+      <div class="checkbox mb-3"></div>
+      <button
+        [disabled]="loginForm.invalid"
+        class="btn btn-lg btn-primary w-100"
+        type="submit"
+      >
+        Sign in
+      </button>
+    </form>
+  </div>
+</div> -->
+
+<div class="content-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card" data-aos="fade-up">
+          <div class="card-body">
+            <div class="aboutus-wrapper">
+              <h1 class="mt-5 text-center mb-5">Login</h1>
+              <div class="row">
+                <div class="col-lg-12 mb-5 mb-sm-2">
+                  <!--  -->
+                  <form
+                    [formGroup]="loginForm"
+                    (ngSubmit)="onSubmit()"
+                    class="form-signin"
+                  >
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <app-input
+                        label="Email Address"
+                        [control]="loginForm.controls.email"
+                      ></app-input>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <app-input
+                        label="Password"
+                        [control]="loginForm.controls.password"
+                        type="password"
+                      ></app-input>
+                      </div>
+                    </div>
+                    <!--  -->
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="text-center">
+                          <button
+                          [disabled]="loginForm.invalid"
+                            type="submit"
+                            class="btn btn-lg btn-dark font-weight-bold mt-3"
+                          >
+                            Submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <!--  -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

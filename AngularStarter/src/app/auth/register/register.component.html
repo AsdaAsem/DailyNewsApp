@@ -1,0 +1,78 @@
+
+
+<!--  -->
+<div class="content-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card" data-aos="fade-up">
+          <div class="card-body">
+            <div class="aboutus-wrapper">
+              <h1 class="mt-5 text-center mb-5">Register</h1>
+              <div class="row">
+                <div class="col-lg-12 mb-5 mb-sm-2">
+                  <!--  -->
+                  <form
+                    [formGroup]="registerForm"
+                    (ngSubmit)="onSubmit()"
+                    class="form-signin"
+                  >
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <app-input
+                          label="Name"
+                          [control]="registerForm.controls.name"
+                        ></app-input>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <app-input
+                          label="Email"
+                          [control]="registerForm.controls.email"
+                        ></app-input>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <app-input
+                          label="Password"
+                          [control]="registerForm.controls.password"
+                          type="password"
+                        ></app-input>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <app-input
+                          label="Confirm Password"
+                          [control]="registerForm.controls.confirmPassword"
+                          type="password"
+                        ></app-input>
+                      </div>
+                    </div>
+                    <!--  -->
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="text-center">
+                          <button
+                            [disabled]="registerForm.invalid"
+                            type="submit"
+                            class="btn btn-lg btn-dark font-weight-bold mt-3"
+                          >
+                            Submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <!--  -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
